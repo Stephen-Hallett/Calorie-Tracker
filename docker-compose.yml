@@ -4,9 +4,9 @@ services:
       context: .
       dockerfile: Dockerfile
     ports:
-      - "4000:3000"
+      - "4000:4000"
     environment:
-      - PORT=3000
+      - PORT=4000
     volumes:
       - ./app/calorieHistory.csv:/app/calorieHistory.csv     # persist CSV
       - ./app:/app:ro    
