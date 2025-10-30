@@ -23,10 +23,7 @@ jobs:
       - name: Redeploy App
         run: |
           ssh -o "StrictHostKeyChecking no" ${{ secrets.VPS_USER }}@apps "
-            if [ ! -d /home/stephen/Calorie-Tracker/.git ]; then
-                git clone https://github.com/Stephen-Hallett/Calorie-Tracker.git /home/stephen/Calorie-Tracker;
-            fi \
-            && cd /home/stephen/Calorie-Tracker \
+            cd /home/stephen/Calorie-Tracker \
             && git pull \
             && docker compose up -d --build
           "
