@@ -9,4 +9,3 @@ services:
       - PORT=4000
     volumes:
       - ./app/calorieHistory.csv:/app/calorieHistory.csv     # persist CSV
-      - ./app:/app:ro    
