@@ -4,9 +4,11 @@ const csv = require("csv-parser");
 const fs = require("fs");
 const path = require("path");
 const moment = require("moment-timezone");
+const cors = require("cors");
 
 const app = express();
 
+app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
